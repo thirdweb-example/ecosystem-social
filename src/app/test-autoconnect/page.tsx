@@ -15,6 +15,7 @@ export default function TestAutoConnect() {
       console.log("@@useAuthentication:onConnect", { 
         wallet, 
         partnerId,
+        "wallet address": wallet.getAccount()?.address || "No address",
         walletId: wallet.id,
         walletChain: wallet.getChain()
       });
