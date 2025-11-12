@@ -1,6 +1,6 @@
 import { ConnectWallet } from "./components/ConnectWallet/ConnectWallet";
-import { ClaimNFT } from "./components/ClaimNFT/ClaimNFT";
-import { LinkXProfile } from "./components/LinkXProfile/LinkXProfile";
+// import { ClaimNFT } from "./components/ClaimNFT/ClaimNFT";
+// import { LinkXProfile } from "./components/LinkXProfile/LinkXProfile";
 
 export default function Home() {
   return (
@@ -9,9 +9,15 @@ export default function Home() {
         <h1 className="text-3xl font-bold mb-4">NFT Gasless Claim App</h1>
         <div className="flex gap-4 items-center">
           <ConnectWallet />
-          <ClaimNFT />
-          <LinkXProfile />
+        {/*  <ClaimNFT  /> */}
+        {/* <LinkXProfile /> */}
         </div>
+        <a 
+          href="/test-autoconnect" 
+          className="text-blue-600 hover:underline text-lg mt-4"
+        >
+          Test Auto Connect →
+        </a>
       </main>
     </div>
   );
