@@ -1,8 +1,8 @@
 'use client'
 
 import { ConnectButton } from "thirdweb/react";
-import { ecosystemWallet } from "thirdweb/wallets";
-import { arbitrumSepolia } from "thirdweb/chains";
+import { ecosystemWallet, createWallet } from "thirdweb/wallets";
+import { berachain } from "thirdweb/chains";
 import { client, ecosystemWalletName, partnerId } from "../../utils/thirdwebClient";
 
 const ecosystemWalletInstance = ecosystemWallet(`ecosystem.${ecosystemWalletName}`, {
@@ -10,7 +10,7 @@ const ecosystemWalletInstance = ecosystemWallet(`ecosystem.${ecosystemWalletName
 });
 
 const wallets = [
-  ecosystemWalletInstance
+  ecosystemWalletInstance, createWallet("global.safe")
 ];
 
 export function ConnectWallet() {
@@ -18,7 +18,7 @@ export function ConnectWallet() {
     <ConnectButton 
       client={client} 
       wallets={wallets} 
-      chain={arbitrumSepolia}
+      chain={berachain}
       recommendedWallets={[ecosystemWalletInstance]}
       // accountAbstraction={{
       //   chain: arbitrumSepolia,
